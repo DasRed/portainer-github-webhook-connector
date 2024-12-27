@@ -26,6 +26,8 @@ async function findWebhookIds(files) {
 async function runWebhooks(body, files) {
     const webhookIds = await findWebhookIds(files);
 
+    console.info(`Hook for files ${files.join(', ')} requested`);
+
     webhookIds.forEach(async ({file, webhookId}) => {
         console.info(`Running Webhook for ${file} (https://${config.portainer.host}/api/stacks/webhooks/${webhookId}).`);
         const response = await fetch(`https://${config.portainer.host}/api/stacks/webhooks/${webhookId}`, {
