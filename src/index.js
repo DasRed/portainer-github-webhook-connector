@@ -43,7 +43,7 @@ async function runWebhooks(body, files) {
             console.error(`Webhook for ${file} (https://${config.portainer.host}/api/stacks/webhooks/${webhookId}) failed.`)
         }
         else {
-            console.info(`Webhook for ${file} (https://${config.portainer.host}/api/stacks/webhooks/${webhookId}) was succesful.`);
+            console.info(`Webhook for ${file} (https://${config.portainer.host}/api/stacks/webhooks/${webhookId}) was successful.`);
         }
     });
 }
