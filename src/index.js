@@ -55,6 +55,8 @@ router.get('/', async (ctx) => {
     );
 });
 
+router.get('/healthcheck', async (ctx) => ctx.status = 204);
+
 const app = new Koa();
 app.use(compress())
    .use(bodyParser({jsonLimit: '20mb'}))

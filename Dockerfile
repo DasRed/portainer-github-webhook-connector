@@ -8,7 +8,7 @@ COPY ./src /var/www/src
 COPY ./package.json /var/www/package.json
 COPY ./package-lock.json /var/www/package-lock.json
 
-HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:6000/api/v2/user || exit 1
+HEALTHCHECK CMD wget --no-verbose --tries=1 --spider http://localhost:6000/healthcheck || exit 1
 
 ENV NODE_ENV production
 
