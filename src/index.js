@@ -46,7 +46,7 @@ async function runWebhooks(body, files) {
     });
 }
 
-router.get('/', async (ctx) => {
+router.post('/', async (ctx) => {
     ctx.status = 204;
 
     runWebhooks(
