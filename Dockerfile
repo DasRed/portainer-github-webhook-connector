@@ -4,6 +4,7 @@ WORKDIR /var/www
 
 RUN mkdir -p /var/www/src
 COPY ./src /var/www/src
+COPY ./.env /var/www/.env
 
 COPY ./package.json /var/www/package.json
 COPY ./package-lock.json /var/www/package-lock.json

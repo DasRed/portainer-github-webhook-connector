@@ -19,6 +19,7 @@
     "dependencies": {
         "@koa/cors": "^5.0.0",
         "@koa/router": "^13.1.0",
+        "dotenv": "^16.4.7",
         "forever": "^4.0.3",
         "koa": "^2.15.3",
         "koa-bodyparser": "^4.4.1",
