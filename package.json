@@ -1,0 +1,61 @@
+{
+    "name": "portainer-github-webhook-connector",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "type": "module",
+    "engines": {
+        "node": ">=22.12.0",
+        "npm": ">=10.9.0"
+    },
+    "scripts": {
+        "dev": "nodemon --watch src ./src/index.js",
+        "start": "forever --minUptime 1000 --spinSleepTime 100 ./src/index.js",
+        "semantic-release": "semantic-release"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DasRed/portainer-github-webhook-connector.git"
+    },
+    "dependencies": {
+        "@koa/cors": "^5.0.0",
+        "@koa/router": "^13.1.0",
+        "forever": "^4.0.3",
+        "koa": "^2.15.3",
+        "koa-bodyparser": "^4.4.1",
+        "koa-compress": "^5.1.1"
+    },
+    "devDependencies": {
+        "@semantic-release/commit-analyzer": "^13.0.0",
+        "@semantic-release/git": "^10.0.1",
+        "@semantic-release/github": "^11.0.1",
+        "@semantic-release/npm": "^12.0.1",
+        "@types/koa-router": "^7.4.8",
+        "nodemon": "^3.1.9",
+        "semantic-release": "^24.2.0",
+        "semantic-release-cli": "^5.4.6"
+    },
+    "release": {
+        "branches": [
+            "main"
+        ],
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            [
+                "@semantic-release/npm",
+                {
+                    "npmPublish": false
+                }
+            ],
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "package.json",
+                        "package-lock.json"
+                    ]
+                }
+            ],
+            "@semantic-release/github"
+        ]
+    }
+}

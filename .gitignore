@@ -1,0 +1,15 @@
+/node_modules/
+
+# OSX
+*.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors
+.idea
+.vscode
+*~
+
+# npm config
+/test.js

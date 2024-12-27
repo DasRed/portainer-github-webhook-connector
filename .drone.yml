@@ -1,0 +1,9 @@
+kind: template
+load: nodeProject.jsonnet
+data:
+    node: 22
+    port: 6000
+    deployToHost: 'chronos.dasred.de'
+    environmentVariables: '["PGWC_PORTAINER_HOST", "PGWC_PORTAINER_TOKEN"]'
+    parameters: ''
+    dockerName: ''
