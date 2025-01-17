@@ -12,7 +12,9 @@ data:
                     "port": 6000,
                     "labels": {
                         "grafana.display": true,
-                        "grafana.name": "Portainer Github Connector"
+                        "grafana.name": "Portainer Github Connector",
+                        "homeassistant.enable": true,
+                        "homeassistant.device_name": "Portainer Github Connector"
                     }
                 }
             }
